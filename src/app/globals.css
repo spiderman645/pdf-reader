@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 20%; /* #333333 Dark Gray for main content area */
+    --foreground: 0 0% 98%; /* Light Gray/White for text on background */
+
+    --primary: 174 100% 27%; /* Teal #009688 for interactive elements */
+    --primary-foreground: 0 0% 98%; /* Text on Teal buttons */
+
+    --secondary: 0 0% 25%; /* Slightly lighter gray for secondary buttons/elements */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%; /* Lighter gray for muted text */
+    
+    --accent: 174 100% 27%; /* Teal #009688 */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 50%; /* A good red for dark themes */
+    --destructive-foreground: 0 0% 98%;
+
+    --card: 0 0% 15%; /* Slightly darker than content background for cards */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%; /* Even darker for popovers */
+    --popover-foreground: 0 0% 98%;
+
+    --border: 0 0% 30%; /* Border color for inputs, cards */
+    --input: 0 0% 25%; /* Input background - slightly distinct from main bg */
+    --ring: 174 100% 37%; /* Teal, slightly lighter for focus rings */
+    
+    --radius: 0.5rem;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    --sidebar-background: 0 0% 7%; /* Very Dark Gray / Near Black for sidebar/header */
+    --sidebar-foreground: 0 0% 85%; /* Text in sidebar */
+    --sidebar-primary: 174 100% 27%; /* Teal for active/primary items in sidebar */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%; /* Card background color for hover in sidebar */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%; /* Main background color for borders in sidebar */
+    --sidebar-ring: 174 100% 37%; /* Teal for focus ring */
+  }
+
+  /* 
+    The .dark class is not strictly necessary if the app is always dark.
+    However, keeping it allows components that might use .dark selectors to style correctly
+    if html class="dark" is set. We will ensure :root variables are the dark theme.
+  */
+  .dark {
+    --background: 0 0% 20%;
+    --foreground: 0 0% 98%;
+    --primary: 174 100% 27%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 174 100% 27%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --border: 0 0% 30%;
+    --input: 0 0% 25%;
+    --ring: 174 100% 37%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 174 100% 27%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 174 100% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
